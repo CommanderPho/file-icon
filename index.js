@@ -2,7 +2,7 @@
 const path = require('path');
 const execa = require('execa');
 
-const bin = path.join(__dirname, 'file-icon');
+const bin = path.join(__dirname, 'file-icon').replace(/ /g, '\\ ');
 
 const validate = (file, options) => {
 	options = Object.assign({
